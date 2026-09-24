@@ -1,0 +1,73 @@
+### Método
+
+```java
+public String obtenerTextoBoton(Button boton) {
+    return boton.getText().toString();
+}
+```
+
+### Cómo utilizarlo
+
+Supongamos que tienes un botón:
+
+```java
+Button btnAceptar = findViewById(R.id.btnAceptar);
+```
+
+Puedes obtener su texto así:
+
+```java
+String texto = obtenerTextoBoton(btnAceptar);
+
+System.out.println(texto);
+```
+
+Si el botón tiene:
+
+```xml
+<Button
+    android:id="@+id/btnAceptar"
+    android:text="Aceptar" />
+```
+
+Entonces:
+
+```java
+texto
+```
+
+contendrá:
+
+```text
+Aceptar
+```
+
+### También puedes hacerlo directamente
+
+Sin crear un método:
+
+```java
+String texto = btnAceptar.getText().toString();
+```
+
+### Si quieres capturar el texto cuando el usuario pulsa el botón
+
+```java
+btnAceptar.setOnClickListener(v -> {
+
+    String texto = ((Button) v).getText().toString();
+
+    System.out.println(texto);
+});
+```
+
+Aquí `v` es precisamente el botón que ha sido pulsado.
+
+**Para un examen**, yo me quedaría con esta idea:
+
+```java
+String texto = boton.getText().toString();
+```
+
+`getText()` → obtiene el texto
+`toString()` → lo convierte en `String`
