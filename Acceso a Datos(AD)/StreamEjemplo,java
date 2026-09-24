@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        String[] frutas = {"Manzana", "Pera", "Plátano"};
+
+        // Convierte el array a Stream y recorre con lambda
+        Arrays.stream(frutas).forEach(fruta -> System.out.println(fruta));
+        
+        // O usando una referencia a método (más corta)
+        // Arrays.stream(frutas).forEach(System.out::println);
+    }
+}
