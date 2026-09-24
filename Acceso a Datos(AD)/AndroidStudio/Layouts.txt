@@ -1,1 +1,5 @@
+//Layouts
 
+Para que abarque todo, el ancho layout width
+ // android:layout_width="0dp"
+para objetos juntos alinear por baseline para que queden todos igual y luego cadena horizontal
