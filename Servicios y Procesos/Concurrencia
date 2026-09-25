@@ -1,0 +1,40 @@
+package app;
+
+public class Concurrencia extends Thread {
+	  public static int amount = 0;
+
+	  public static void main(String[] args) {
+	    Concurrencia thread = new Concurrencia();
+	    thread.start();
+	    System.out.println(amount);
+	    amount++;
+	    System.out.println(amount);
+	  }
+
+	  public void run() {
+	    amount++;
+	  }
+	}
+
+//Como los programas se ejecutan en simultaneo es imposible saber el valor de la variable, es 
+imposible saber el orden en que se ejecuta el codigo se debe intentar poner la menor cantidad posible 
+de atributos entre hilos o controlar los procesos con isAlive()
+
+
+public class Main extends Thread {
+  public static int cantgidad = 0;
+
+  public static void main(String[] args) {
+    Main hilo = new Main();
+    hilo.start();
+    // Esperando a que el hilo termine
+    while(thread.isAlive()) {
+      System.out.println("Esperando...");
+    } } } }
+    // Update amount and print its value
+    System.out.println("Main: " + cantidad);
+    cantidad++;
+    System.out.println("Main: " + cantidad);
+  
+  public void run() {
+    cantidad++;
